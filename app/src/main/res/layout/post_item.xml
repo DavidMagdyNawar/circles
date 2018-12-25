@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+  >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/sign_up_profile"
+            android:clickable="true"
+            />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/userImage"
+            android:text="David Magdy Nawar"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            />
+        <ImageView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:src="@drawable/more"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:maxLines="1"
+            android:layout_toRightOf="@id/userImage"
+            android:layout_below="@id/userName"
+            android:textSize="16sp"
+            android:text="12 mins ago"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+
+        >
+        <TextView
+            android:id="@+id/text_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dummy post"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/voice_description"-->
+            <!--android:layout_width="256dp"-->
+            <!--android:layout_height="96dp"-->
+            <!--android:background="#BDBDBD">-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/play_note_card"
+            android:layout_width="256dp"
+            android:layout_height="64dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:background="#9E9E9E"
+            app:cardCornerRadius="4dp">
+           <ImageButton
+                android:id="@+id/play"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:src="@drawable/button_play"
+                />
+            <ImageButton
+                android:id="@+id/pause"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:src="@drawable/pause_button"
+                android:visibility="gone"
+                />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="296dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="64dp"
+                android:layout_marginStart="64dp"
+                android:progressDrawable="@drawable/seekbar"
+                android:thumb="@drawable/seekbar_thumb" />
+            <TextView
+                android:id="@+id/voice_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/playing_indicator"
+            android:layout_width="214dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="85dp"
+            android:layout_toRightOf="@+id/play_note_card"
+            android:src="@drawable/button_icon_voice_disabled" />
+        <TextView
+            android:id="@+id/timePLayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/play_note_card"/>
+        
+        <TextView
+            android:id="@+id/heared_number"
+            android:text="45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/heared"
+            android:text="Heared: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_toLeftOf="@id/heared_number"
+            />
+        <TextView
+            android:id="@+id/shares_number"
+            android:text="96 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_toLeftOf="@id/heared"
+            />
+        <TextView
+            android:id="@+id/shares"
+            android:text="Shared: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_toLeftOf="@id/shares_number"
+            />
+        <TextView
+            android:id="@+id/comment_number"
+            android:text="96 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_toLeftOf="@id/shares"
+            />
+        <TextView
+            android:id="@+id/comments"
+            android:text="Comments: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePLayed"
+            android:layout_toLeftOf="@id/comment_number"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D3D3D3">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/comment_a_record"
+            android:background="@android:color/transparent"
+            android:layout_margin="16dp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3">
+
+        </View>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/comments"
+            android:background="@android:color/transparent"
+            android:layout_margin="16dp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3">
+
+        </View>
+        <ImageButton
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:background="@android:color/transparent"
+            android:layout_margin="16dp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3">
+
+        </View>
+        <ImageButton
+            android:id="@+id/share"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/share"
+            android:background="@android:color/transparent"
+
+            android:layout_margin="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D3D3D3">
+
+    </View>
+</LinearLayout>
